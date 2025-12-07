@@ -1,10 +1,4 @@
-# Use lightweight nginx image
+# Use lightweight web server for static HTML
 FROM nginx:alpine
-
-# Copy all files from src folder into nginx html folder
-COPY src/ /usr/share/nginx/html/
-
-# Expose port 80
+COPY index.html /usr/share/nginx/html/index.html
 EXPOSE 80
-
-# Start nginx (default command in image)
